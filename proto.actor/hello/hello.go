@@ -7,8 +7,12 @@ import (
 	"github.com/AsynkronIT/protoactor-go/actor"
 )
 
+// Nachrichten
 type hello struct{ who string }
 type goodbye struct{ until string }
+
+// soll der Actor sein!
+// muss Receive(actor.Context) implementieren
 type helloActor struct{}
 
 func (state *helloActor) Receive(context actor.Context) {
@@ -26,6 +30,7 @@ func main() {
 		return &helloActor{}
 	})
 	pid := context.Spawn(props)
+
 	context.Send(pid, &hello{who: "Roger"})
 	context.Send(pid, &goodbye{until: "Tomorrow"})
 	console.ReadLine() // nolint:errcheck
