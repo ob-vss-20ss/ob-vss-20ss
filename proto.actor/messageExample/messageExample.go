@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/ob-vss-ss19/ob-vss-ss19/proto.actor/messages"
+	"github.com/ob-vss-20ss/ob-vss-20ss/proto.actor/messages"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 regenerate-docker:
 	docker run --rm -it \
-		-v `pwd`:/go/src/github.com/ob-vss-ss19/ob-vss-ss19/proto.actor/messages \
-		-w /go/src/github.com/ob-vss-ss19/ob-vss-ss19/proto.actor/messages \
+		-v `pwd`:/go/src/github.com/ob-vss-20ss/ob-vss-20ss/proto.actor/messages \
+		-w /go/src/github.com/ob-vss-20ss/ob-vss-20ss/proto.actor/messages \
 		obraun/vss-protoactor-jenkins \
 		make regenerate
 

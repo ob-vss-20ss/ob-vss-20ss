@@ -8,7 +8,7 @@ import (
 
 	"github.com/AsynkronIT/protoactor-go/actor"
 	"github.com/AsynkronIT/protoactor-go/remote"
-	"github.com/ob-vss-ss19/ob-vss-ss19/proto.actor/echomessages"
+	"github.com/ob-vss-20ss/ob-vss-20ss/proto.actor/echomessages"
 )
 
 type MyActor struct {
