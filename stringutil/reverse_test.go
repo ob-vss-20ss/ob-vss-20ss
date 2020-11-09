@@ -3,6 +3,8 @@ package stringutil_test
 import (
 	"fmt"
 	"testing"
+
+	"github.com/ob-vss-20ss/ob-vss-20ss/stringutil"
 )
 
 // Test
@@ -15,7 +17,7 @@ func TestReverse(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		got := Reverse(c.in)
+		got := stringutil.Reverse(c.in)
 		if got != c.want {
 			t.Errorf("Reverse(%q) == %q, want %q", c.in, got, c.want)
 		}
@@ -24,7 +26,7 @@ func TestReverse(t *testing.T) {
 
 // Example
 func ExampleReverse() {
-	fmt.Print(Reverse("Hallo Welt"))
+	fmt.Print(stringutil.Reverse("Hallo Welt"))
 	// output:
 	// tleW ollaH
 }
@@ -32,6 +34,6 @@ func ExampleReverse() {
 // Benchmark
 func BenchmarkReverse(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Reverse("ljhdsagjlhfasdgljfadsgfljhasgfljahgfdsajlhgafsdljh")
+		stringutil.Reverse("ljhdsagjlhfasdgljfadsgfljhasgfljahgfdsajlhgafsdljh")
 	}
 }
